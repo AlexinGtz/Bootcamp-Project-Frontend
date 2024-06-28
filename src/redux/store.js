@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
-import testCounter from './reducers/testCounter'
+import userReducer from './reducers/userReducer'
 
 export const store = configureStore({
     reducer: {
-        testCounter: testCounter,
-    },
+        userData: userReducer
+    }
 });

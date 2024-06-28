@@ -1,0 +1,29 @@
+.BannerAppContainer {
+    width: 100%;
+    height: 4rem;
+    background-color: #4594A5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.LogoImage {
+    margin: 1rem 1rem 1rem 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.ImageContainer {
+    width: 5rem;
+    float: left; 
+}
+
+.TitleContainer {
+    width: 100%;
+    text-align: center;
+    font-size: large;
+}
+
+.EmptyContainer {
+    width: 5rem;
+}

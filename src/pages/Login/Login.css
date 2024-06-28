@@ -1,0 +1,25 @@
+  .loginContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15rem;
+    align-items: center;
+  }
+
+  .loginInput {
+    margin: 0.6rem 0;
+    height: 1.5rem;
+    width: 15rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: large;
+    background-color: #FFD066;
+  }
+
+  .loginButton {
+    width: 10rem;
+    height: 2rem;
+    font-size: large;
+    margin-top: 1rem;
+    background-color: #FF7866;
+    border-radius: 5px;
+  }
