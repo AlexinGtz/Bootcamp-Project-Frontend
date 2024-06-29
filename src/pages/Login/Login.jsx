@@ -74,7 +74,7 @@ export const Login = () => {
                     onChange={(e) => { setUserPassword(e.target.value) } }
                     onKeyDown={detectEnterKeyDown}
                 />
-                <button className='loginButton' onClick={handleButtonLoginClick }>
+                <button className='loginButton' onClick={ handleButtonLoginClick }>
                     Log in
                 </button>
             </div>

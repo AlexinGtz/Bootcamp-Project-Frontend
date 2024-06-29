@@ -6,7 +6,6 @@ describe("<BannerApp />", () => {
         render(<BannerApp />)
     
     const appTitle = screen.queryByText("BootCamp School")
-
     expect(appTitle).toBeTruthy();
     
     })
