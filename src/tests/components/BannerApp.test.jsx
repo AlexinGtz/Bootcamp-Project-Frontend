@@ -1,13 +1,11 @@
 import { BannerApp } from "../../components/BannerApp/BannerApp";
-import { render, screen } from '@testing-library/react';
+import { render, screen } from "@testing-library/react";
 
 describe("<BannerApp />", () => {
     test("Render Succesfully", () => {
-        render(<BannerApp />)
-    
-    const appTitle = screen.queryByText("BootCamp School")
-    expect(appTitle).toBeTruthy();
-    
-    })
+        render(<BannerApp />);
 
-})
+        const appTitle = screen.queryByText("BootCamp School");
+        expect(appTitle).toBeTruthy();
+    });
+});
