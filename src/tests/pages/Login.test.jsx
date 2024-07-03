@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Login } from "../../pages/Login/Login";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { useDispatch } from "react-redux";
-import { BannerApp } from "../../components/BannerApp/BannerApp";
+import { AppBanner } from "../../components/BannerApp/AppBanner";
 import { API } from "../../api";
 import { setUserData } from "../../redux/reducers/userReducer";
 import { enqueueSnackbar } from "notistack";

@@ -6,13 +6,13 @@ import { setUserData } from "../../redux/reducers/userReducer";
 import { useDispatch } from "react-redux";
 import { enqueueSnackbar } from "notistack";
 import { setToken } from "../../helpers/local";
-import { BannerApp } from "../../components/BannerApp/BannerApp";
+import { AppBanner } from "../../components/BannerApp/AppBanner";
 
 const APIConnection = new API();
 
 export const Login = () => {
-    const [userEmail, setUserEmail] = useState("pedro@pe.com");
-    const [userPassword, setUserPassword] = useState("raccoon");
+    const [userEmail, setUserEmail] = useState("");
+    const [userPassword, setUserPassword] = useState("");
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -57,34 +57,36 @@ export const Login = () => {
 
     return (
         <div>
-            <BannerApp />
             <div className="loginContainer">
-                <input
-                    className="loginInput"
-                    type="text"
-                    placeholder="email"
-                    value={userEmail}
-                    onChange={(e) => {
-                        setUserEmail(e.target.value);
-                    }}
-                    onKeyDown={detectEnterKeyDown}
-                />
-                <input
-                    className="loginInput"
-                    type="password"
-                    placeholder="password"
-                    value={userPassword}
-                    onChange={(e) => {
-                        setUserPassword(e.target.value);
-                    }}
-                    onKeyDown={detectEnterKeyDown}
-                />
-                <button
-                    className="loginButton"
-                    onClick={handleButtonLoginClick}
-                >
-                    Log in
-                </button>
+                <AppBanner />
+                <div className="inputsContainer">
+                    <input
+                        className="loginInput"
+                        type="text"
+                        placeholder="email"
+                        value={userEmail}
+                        onChange={(e) => {
+                            setUserEmail(e.target.value);
+                        }}
+                        onKeyDown={detectEnterKeyDown}
+                    />
+                    <input
+                        className="loginInput"
+                        type="password"
+                        placeholder="password"
+                        value={userPassword}
+                        onChange={(e) => {
+                            setUserPassword(e.target.value);
+                        }}
+                        onKeyDown={detectEnterKeyDown}
+                    />
+                    <button
+                        className="loginButton"
+                        onClick={handleButtonLoginClick}
+                    >
+                        Log in
+                    </button>
+                </div>
             </div>
         </div>
     );
