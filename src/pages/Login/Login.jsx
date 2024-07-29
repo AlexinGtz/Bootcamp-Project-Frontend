@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { useEffect } from "react";
 import "./Login.css";
 import { API } from "../../api";
 import { useNavigate } from "react-router-dom";
 import { setUserData } from "../../redux/reducers/userReducer";
 import { useDispatch } from "react-redux";
 import { enqueueSnackbar } from "notistack";
-import { setToken } from "../../helpers/local";
+import { setToken, getToken } from "../../helpers/local";
 import { AppBanner } from "../../components/BannerApp/AppBanner";
 
 const APIConnection = new API();
@@ -16,6 +17,12 @@ export const Login = () => {
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
+
+    useEffect(() => {
+        if(getToken()) {
+            navigate('/')
+        }
+    }, [])
 
     const detectEnterKeyDown = (e) => {
         /* istanbul ignore else */
