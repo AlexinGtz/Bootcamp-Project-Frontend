@@ -4,12 +4,15 @@ import { RouterProvider } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { mainRouter } from './routes/mainRouter'
 import { store } from './redux/store'
-import './index.css'
+import './main.css'
+import { SnackbarProvider } from 'notistack'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
-      <RouterProvider router={mainRouter} />
+      <SnackbarProvider maxSnack={1} autoHideDuration={3000} anchorOrigin={{vertical:'top', horizontal:'left'}}>
+        <RouterProvider router={mainRouter} />
+      </SnackbarProvider>
     </Provider>
-  </React.StrictMode>,
+  </React.StrictMode>
 )

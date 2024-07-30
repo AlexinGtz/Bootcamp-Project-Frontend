@@ -1,0 +1,29 @@
+.appBannerContainer {
+    width: 100%;
+    height: 4rem;
+    background-color: #4594a5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.appBannerLogoImage {
+    margin: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.appBannerImageContainer {
+    width: 5rem;
+    float: left;
+}
+
+.appBannerTitleContainer {
+    width: 100%;
+    text-align: center;
+    font-size: large;
+}
+
+.appBannerEmptyContainer {
+    width: 5rem;
+}
