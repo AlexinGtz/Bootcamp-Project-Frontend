@@ -7,7 +7,7 @@ import { setUserData } from "../../redux/reducers/userReducer";
 import { useDispatch } from "react-redux";
 import { enqueueSnackbar } from "notistack";
 import { setToken, getToken } from "../../helpers/local";
-import { AppBanner } from "../../components/BannerApp/AppBanner";
+import { AppBanner } from "../../components/AppBanner/AppBanner";
 
 const APIConnection = new API();
 
@@ -19,10 +19,10 @@ export const Login = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        if(getToken()) {
-            navigate('/')
+        if (getToken()) {
+            navigate("/");
         }
-    }, [])
+    }, []);
 
     const detectEnterKeyDown = (e) => {
         /* istanbul ignore else */
@@ -63,37 +63,35 @@ export const Login = () => {
     };
 
     return (
-        <div>
-            <div className="loginContainer">
-                <AppBanner />
-                <div className="inputsContainer">
-                    <input
-                        className="loginInput"
-                        type="text"
-                        placeholder="email"
-                        value={userEmail}
-                        onChange={(e) => {
-                            setUserEmail(e.target.value);
-                        }}
-                        onKeyDown={detectEnterKeyDown}
-                    />
-                    <input
-                        className="loginInput"
-                        type="password"
-                        placeholder="password"
-                        value={userPassword}
-                        onChange={(e) => {
-                            setUserPassword(e.target.value);
-                        }}
-                        onKeyDown={detectEnterKeyDown}
-                    />
-                    <button
-                        className="loginButton"
-                        onClick={handleButtonLoginClick}
-                    >
-                        Log in
-                    </button>
-                </div>
+        <div className="loginContainer">
+            <AppBanner />
+            <div className="loginInputsContainer">
+                <input
+                    className="loginInput"
+                    type="text"
+                    placeholder="email"
+                    value={userEmail}
+                    onChange={(e) => {
+                        setUserEmail(e.target.value);
+                    }}
+                    onKeyDown={detectEnterKeyDown}
+                />
+                <input
+                    className="loginInput"
+                    type="password"
+                    placeholder="password"
+                    value={userPassword}
+                    onChange={(e) => {
+                        setUserPassword(e.target.value);
+                    }}
+                    onKeyDown={detectEnterKeyDown}
+                />
+                <button
+                    className="loginButton"
+                    onClick={handleButtonLoginClick}
+                >
+                    Log in
+                </button>
             </div>
         </div>
     );

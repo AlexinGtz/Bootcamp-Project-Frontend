@@ -21,7 +21,7 @@
     border-radius: 5px;
 }
 
-.inputsContainer {
+.loginInputsContainer {
     margin-top: 15%;
     display: flex;
     flex-direction: column;
