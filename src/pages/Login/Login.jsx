@@ -12,17 +12,17 @@ import { AppBanner } from "../../components/AppBanner/AppBanner";
 const APIConnection = new API();
 
 export const Login = () => {
-    const [userEmail, setUserEmail] = useState("");
-    const [userPassword, setUserPassword] = useState("");
+    const [userEmail, setUserEmail] = useState("luiginini@gmail.com");
+    const [userPassword, setUserPassword] = useState("Luigi");
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    useEffect(() => {
+    /*useEffect(() => {
         if (getToken()) {
             navigate("/");
         }
-    }, []);
+    }, []);*/
 
     const detectEnterKeyDown = (e) => {
         /* istanbul ignore else */
@@ -59,7 +59,7 @@ export const Login = () => {
             })
         );
 
-        navigate("/");
+        navigate("/subject/subject-homeworks/S2");
     };
 
     return (

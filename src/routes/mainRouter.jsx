@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 import { MainPage } from '../pages/MainPage/MainPage'
 import { Login } from '../pages/Login/Login'
+import { SubjectHomework } from '../pages/SubjectHomework/SubjectHomework'
 
 export const mainRouter = createBrowserRouter([
     {
@@ -14,5 +15,12 @@ export const mainRouter = createBrowserRouter([
         element: (
             <Login />
         )
-    }
+    },
+    {
+        path: '/subject/subject-homeworks/:subjectId?',
+        element: (
+            <SubjectHomework />
+        )
+    },
+
 ])

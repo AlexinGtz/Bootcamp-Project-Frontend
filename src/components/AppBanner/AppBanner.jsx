@@ -1,5 +1,6 @@
 import './AppBanner.css'
 import logoImage from '../../assets/images/logo.svg'
+
 export const AppBanner = () => {
 
     return (

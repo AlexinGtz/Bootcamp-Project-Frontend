@@ -1,5 +1,8 @@
 import axios from "axios";
 import { enqueueSnackbar } from "notistack";
+import { getToken } from "./helpers/local";
+
+ 
 
 export class API {
     axiosInstance;
@@ -30,6 +33,14 @@ export class API {
         return this.axiosInstance.post("/login", {
             userEmail,
             userPassword
+        });
+    }
+
+    async subjectHomework(subjectId) {
+        return this.axiosInstance.get(`/subjectHomework/${subjectId}`, {
+            headers: {
+                Authorization: `Bearer ${getToken()}` 
+            }
         });
     }
 }

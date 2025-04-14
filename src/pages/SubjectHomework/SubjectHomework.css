@@ -1,0 +1,50 @@
+.subjectDetailsContainer {
+    margin-top: 0; 
+ }
+ 
+.subjectContainer {
+    margin-bottom: 2rem;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     padding: 0 12% 0 12%;
+}
+ 
+ .subjectTitleContainer {
+     width: 50%;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+ }
+ 
+ .subjectAverageContainer {
+     width: 50%;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-end;
+ }
+ 
+ .homeworksContainer {
+     margin-top: 1%;
+     display: flex;
+     flex-direction: row;
+ }
+ 
+ .handledHomeworkContainer {
+     width: 50%;
+     align-items: center;
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ .pendingHomeworkContainer {
+     width: 50%;
+     align-items: center;
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ h2 {
+    color: gray;
+ }
+ 
